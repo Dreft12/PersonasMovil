@@ -8,6 +8,7 @@
     <string name="limpiar">Limpiar</string>
     <string name="registrar">Registrar</string>
     <string name="listar">Listar</string>
+    <string name="exitoso">Guardado exitoso</string>
     <string-array name="opciones">
         <item>@string/registrar</item>
         <item>@string/listar</item>

@@ -10,16 +10,29 @@ import android.widget.ListView;
 
 public class Principal extends AppCompatActivity {
     private ListView lv;
-    private String [] opc;
+    private String[] opc;
     private Intent in;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+        lv = findViewById(R.id.lstPersonas);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                
+                switch (i) {
+                    case 0: {
+                        in = new Intent(Principal.this, Registrar.class);
+                        startActivity(in);
+                        break;
+                    }
+                    case 1: {
+                        in = new Intent(Principal.this, Listar.class);
+                        startActivity(in);
+                        break;
+                    }
+                }
             }
         });
     }
